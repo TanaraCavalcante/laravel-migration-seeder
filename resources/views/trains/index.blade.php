@@ -3,7 +3,7 @@
 @section("page-title", "Trains index")
 
 @section("main-content")
-    <h1>Trains Informations</h1>
+
     {{-- "id" => 1
     "azienda" => "Trenitalia"
     "stazione_partenza" => "Roma Termini"
@@ -16,36 +16,33 @@
     "cancellato" => 0 --}}
 
     <section class="container">
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Azienda</th>
-                            <th scope="col">Stazione partenza</th>
-                            <th scope="col">Stazione arrivo</th>
-                            <th scope="col">Orario partenza</th>
-                            <th scope="col">Orario arrivo</th>
-                            <th scope="col">Codice treno</th>
-                          </tr>
-                        </thead>
-                        @forelse ($trains as $train)
-                        <tbody>
-                          <tr>
-                            <th scope="row">{{ $train->id}}</th>
-                            <td>{{ $train->azienda}}</td>
-                            <td>{{ $train->stazione_partenza}}</td>
-                            <td>{{ $train->stazione_arrivo}}</td>
-                            <td>{{ $train->orario_partenza}}</td>
-                            <td>{{ $train->orario_arrivo}}</td>
-                            <td>{{ $train->codice_treno}}</td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Azienda</th>
+                    <th scope="col">Stazione partenza</th>
+                    <th scope="col">Stazione arrivo</th>
+                    <th scope="col">Orario partenza</th>
+                    <th scope="col">Orario arrivo</th>
+                    <th scope="col">Codice treno</th>
+                </tr>
+            </thead>
+            <tbody>
+            @forelse ($trains as $train)
+                <tr>
+                    <th scope="row">{{ $train->id}}</th>
+                    <td >{{ $train->azienda}}</td>
+                    <td>{{ $train->stazione_partenza}}</td>
+                    <td>{{ $train->stazione_arrivo}}</td>
+                    <td>{{ $train->orario_partenza}}</td>
+                    <td>{{ $train->orario_arrivo}}</td>
+                    <td>{{ $train->codice_treno}}</td>
+                </tr>
             @empty
-                    <h1>No trains are avaliable at the moment...</h1>
+            </tbody>
+        </table>
+            <h1>No trains are avaliable at the moment...</h1>
             @endforelse
-
     </section>
 @endsection
