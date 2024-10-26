@@ -16,24 +16,36 @@
     "cancellato" => 0 --}}
 
     <section class="container">
-        <div class="row">
-            @forelse ($trains as $train)
-                <div class="col-10">
-                    <ul>
-                        <li>
-                            <p>{{ $train->azienda}}</p>
-                            <p>{{ $train->stazione_partenza}}</p>
-                        </li>
-                    </ul>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Azienda</th>
+                            <th scope="col">Stazione partenza</th>
+                            <th scope="col">Stazione arrivo</th>
+                            <th scope="col">Orario partenza</th>
+                            <th scope="col">Orario arrivo</th>
+                            <th scope="col">Codice treno</th>
+                          </tr>
+                        </thead>
+                        @forelse ($trains as $train)
+                        <tbody>
+                          <tr>
+                            <th scope="row">{{ $train->id}}</th>
+                            <td>{{ $train->azienda}}</td>
+                            <td>{{ $train->stazione_partenza}}</td>
+                            <td>{{ $train->stazione_arrivo}}</td>
+                            <td>{{ $train->orario_partenza}}</td>
+                            <td>{{ $train->orario_arrivo}}</td>
+                            <td>{{ $train->codice_treno}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
 
                 </div>
             @empty
-                <div col-12>
                     <h1>No trains are avaliable at the moment...</h1>
-                </div>
             @endforelse
-
-        </div>
 
     </section>
 @endsection
