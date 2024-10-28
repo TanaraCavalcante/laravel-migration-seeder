@@ -35,7 +35,9 @@
                     <td >{{ $treno->azienda}}</td>
                     <td>{{ $treno->stazione_partenza}}</td>
                     <td>{{ $treno->stazione_arrivo}}</td>
+                    <td>{{ $treno->giorno_partenza}}</td>
                     <td>{{ $treno->orario_partenza}}</td>
+                    <td>{{ $treno->giorno_arrivo}}</td>
                     <td>{{ $treno->orario_arrivo}}</td>
                     <td>{{ $treno->codice_treno}}</td>
                 </tr>
