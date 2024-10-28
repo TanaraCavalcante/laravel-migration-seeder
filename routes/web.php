@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TrainsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,4 @@ use App\Http\Controllers\TrainsController;
 //     return view('pages.home');
 // });
 
- Route::get("/", [TrainsController::class, "index"]);
+ Route::GET("/", [TreniController::class, "index"]);
