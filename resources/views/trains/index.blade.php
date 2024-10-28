@@ -23,23 +23,25 @@
                     <th scope="col">Azienda</th>
                     <th scope="col">Stazione partenza</th>
                     <th scope="col">Stazione arrivo</th>
+                    <th scope="col">Giorno di partenza</th>
                     <th scope="col">Orario partenza</th>
+                    <th scope="col">Giorno di arrivo</th>
                     <th scope="col">Orario arrivo</th>
                     <th scope="col">Codice treno</th>
                 </tr>
             </thead>
             <tbody>
-            @forelse ($treni as $treno)
+            @forelse ($trains as $train)
                 <tr>
-                    <th scope="row">{{ $treno->id}}</th>
-                    <td >{{ $treno->azienda}}</td>
-                    <td>{{ $treno->stazione_partenza}}</td>
-                    <td>{{ $treno->stazione_arrivo}}</td>
-                    <td>{{ $treno->giorno_partenza}}</td>
-                    <td>{{ $treno->orario_partenza}}</td>
-                    <td>{{ $treno->giorno_arrivo}}</td>
-                    <td>{{ $treno->orario_arrivo}}</td>
-                    <td>{{ $treno->codice_treno}}</td>
+                    <th scope="row">{{ $train->id}}</th>
+                    <td >{{ $train->azienda}}</td>
+                    <td>{{ $train->stazione_partenza}}</td>
+                    <td>{{ $train->stazione_arrivo}}</td>
+                    <td>{{ $train->giorno_partenza}}</td>
+                    <td>{{ $train->orario_partenza}}</td>
+                    <td>{{ $train->giorno_arrivo}}</td>
+                    <td>{{ $train->orario_arrivo}}</td>
+                    <td>{{ $train->codice_treno}}</td>
                 </tr>
             @empty
             </tbody>
