@@ -28,6 +28,7 @@
                     <th scope="col">Giorno di arrivo</th>
                     <th scope="col">Orario arrivo</th>
                     <th scope="col">Codice treno</th>
+                    <th scope="col">Numero carrozze</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                     <td>{{ $train->giorno_arrivo}}</td>
                     <td>{{ $train->orario_arrivo}}</td>
                     <td>{{ $train->codice_treno}}</td>
+                    <td>{{ $train->numero_carrozze}}</td>
                 </tr>
             @empty
             </tbody>
